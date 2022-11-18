@@ -10,7 +10,14 @@
 	<body>
 		<script src="js/three.js"></script>
 		<script>
-			const scene = new THREE.Scene();
+			var scene = new THREE.Scene();
+			var spotLight = new THREE.SpotLight(0xeeeece);
+			spotLight.position.set(1000, 1000, 1000);
+			scene.add(spotLight);
+			var spotLight2 = new THREE.SpotLight(0xffffff);
+			spotLight2.position.set( -200, -200, -200);
+			scene.add(spotLight2);
+			
 			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 			const renderer = new THREE.WebGLRenderer();
