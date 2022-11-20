@@ -42,6 +42,12 @@
 			
 			scene.add( cube3 );
 			
+			const geometry4 = new THREE.BoxGeometry( 1, 1, 1 );
+			var material4 = new THREE.MeshPhongMaterial( {color: 0xdaa520, specular: 0xbcbcbc,} );
+			const cube4 = new THREE.Mesh( geometry4, material4 );
+			
+			scene.add( cube );
+			
 			camera.position.z = 5;
 
 			function animate() {
@@ -53,6 +59,8 @@
 				cube2.rotation.y += 0.01;
 				cube3.rotation.x += 0.05;
 				cube3.rotation.y += 0.05;
+				cube4.rotation.x += -0.05;
+				cube4.rotation.y += -0.05;
 				renderer.render( scene, camera );
 			};
 
