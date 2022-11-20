@@ -30,7 +30,7 @@
 			
 			scene.add( cube );
 
-			const geometry2 = new THREE.BoxGeometry( 3, 3, 3 );
+			const geometry2 = new THREE.BoxGeometry( 1.1, 1.1, 1.1 );
 			var material2 = new THREE.MeshPhongMaterial( {color: 0xdaa520, specular: 0xbcbcbc,} );
 			const cube2 = new THREE.Mesh( geometry2, material2 );
 			
@@ -44,8 +44,8 @@
 
 				cube.rotation.x += 0.01;
 				cube.rotation.y += 0.01;
-				cube2.rotation.x += 0.01;
-				cube2.rotation.y += 0.01;
+				cube2.rotation.x += -0.01;
+				cube2.rotation.y += -0.01;
 
 				renderer.render( scene, camera );
 			};
