@@ -1,70 +1,147 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>3D Model</title>
-		<style>
-			body { margin: 0; }
-		</style>
-	</head>
-	<body>
-		<script src="js/three.js"></script>
-		<script>
-			var scene = new THREE.Scene();
-			var spotLight = new THREE.SpotLight(0xeeeece);
-			spotLight.position.set(1000, 1000, 1000);
-			scene.add(spotLight);
-			var spotLight2 = new THREE.SpotLight(0xffffff);
-			spotLight2.position.set( -200, -200, -200);
-			scene.add(spotLight2);
-			
-			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THREE JS - Lesson</title>
+</head>
+<body>
 
-			const renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
+    <style>
+        * {margin:0;padding:0;}
 
-			const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-			var material = new THREE.MeshPhongMaterial( {color: 0xdaa520, specular: 0xbcbcbc,} );
-			const cube = new THREE.Mesh( geometry, material );
-			
-			scene.add( cube );
+        body {overflow: hidden;}
 
-			const geometry2 = new THREE.BoxGeometry( 1, 1, 1 );
-			var material2 = new THREE.MeshPhongMaterial( {color: 0xc0c0c0, specular: 0xbcbcbc,} );
-			const cube2 = new THREE.Mesh( geometry2, material2 );
-			
-			scene.add( cube2 );
-			
-			const geometry3 = new THREE.BoxGeometry( 1, 1, 1 );
-			var material3 = new THREE.MeshPhongMaterial( {color: 0xc0c0c0, specular: 0xbcbcbc,} );
-			const cube3 = new THREE.Mesh( geometry3, material3 );
-			
-			scene.add( cube3 );
-			
-			const geometry4 = new THREE.BoxGeometry( 1, 1, 1 );
-			var material4 = new THREE.MeshPhongMaterial( {color: 0xdaa520, specular: 0xbcbcbc,} );
-			const cube4 = new THREE.Mesh( geometry4, material4 );
-			
-			scene.add( cube4 );
-			
-			camera.position.z = 5;
+        .container {width: 100%; height: 100vh;}
+    </style>
 
-			function animate() {
-				requestAnimationFrame( animate );
+    <div class="container"></div>
 
-				cube.rotation.x += -0.01;
-				cube.rotation.y += -0.01;
-				cube2.rotation.x += 0.01;
-				cube2.rotation.y += 0.01;
-				cube3.rotation.x += 0.05;
-				cube3.rotation.y += 0.05;
-				cube4.rotation.x += -0.05;
-				cube4.rotation.y += -0.05;
-				renderer.render( scene, camera );
-			};
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "js/three.module.js",
+                "OrbitControls": "js/OrbitControls.js",
+                "GLTFLoader": "js/GLTFLoader.js",
+                "RectAreaLightHelper": "js/RectAreaLightHelper.js",
+                "RectAreaLightUniformsLib": "js/RectAreaLightUniformsLib.js"
+            }
+        }
+    </script>
 
-			animate();
-		</script>
-	</body>
+    <script type="module">
+
+        import * as THREE from "../js/three.module.js";
+        import { OrbitControls } from "../js/OrbitControls.js";
+        import { GLTFLoader } from "../js/GLTFLoader.js";
+        import { RectAreaLightHelper } from "../js/RectAreaLightHelper.js"
+        import { RectAreaLightUniformsLib } from "../js/RectAreaLightUniformsLib.js";
+
+        function init() {
+            let container = document.querySelector(".container");
+
+            //Scene
+            const scene = new THREE.Scene()
+            scene.background = new THREE.Color("#E2DFE1");
+
+            //Camera
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 3000);
+            camera.position.set(0, 0.5, 1)
+
+            //render
+            const renderer = new THREE.WebGLRenderer({antialias: true})
+            renderer.setSize(window.innerWidth, window.innerHeight)
+            container.appendChild(renderer.domElement)
+
+            let plain;
+            {
+                plain = new THREE.Mesh(
+                    new THREE.PlaneGeometry(1000, 1000),
+                    new THREE.MeshBasicMaterial({color: "#E2DFE1"})
+                )
+                plain.reciveShadow = true;
+                plain.position.set(0, -1, 0)
+                plain.rotateX(-Math.PI / 2);
+                scene.add(plain)
+            }
+
+            // Model
+            {
+                const loader = new GLTFLoader();
+                loader.load("scene.gltf", gltf => {
+                scene.add(gltf.scene);
+                }, 
+                    function (error) {
+                        console.log("Error: " + error)
+                    }
+                )
+            }
+            
+            {
+                const light = new THREE.DirectionalLight(0xffffff, 1)
+                light.position.set(-2, 0, 10)
+                light.lookAt(0, -1, 0)
+                scene.add(light)
+
+                // Helper
+                // const helper = new THREE.DirectionalLightHelper(light, 5)
+                // scene.add(helper)
+            }
+
+            {
+                const light = new THREE.DirectionalLight(0xffffff, 1)
+                light.position.set(2, 0, 5)
+                light.lookAt(0, 1, 0)
+                scene.add(light)
+
+                // Helper
+                // const helper = new THREE.DirectionalLightHelper(light, 5)
+                // scene.add(helper)
+            }
+
+            RectAreaLightUniformsLib.init();
+            {
+                const rectLight = new THREE.RectAreaLight(0xffffff, 1, 100, 100);
+                rectLight.position.set(-10,0,0)
+                rectLight.rotation.y = Math.PI + Math.PI/4;
+                scene.add(rectLight)
+            }
+
+            {
+                const rectLight = new THREE.RectAreaLight(0xffffff, 1, 100, 100);
+                rectLight.position.set(10,0,0)
+                rectLight.rotation.y = Math.PI - Math.PI/4;
+                scene.add(rectLight)
+            }
+            
+            //OrbitControls
+            const controls = new OrbitControls(camera, renderer.domElement);
+            controls.autoRotate = true;
+            controls.autoRotateSpeed = 5;
+            controls.enableDamping = true;
+
+            //Resize
+            window.addEventListener("resize", onWindowResize, false)
+            
+            function onWindowResize() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+
+                renderer.setSize(window.innerWidth, window.innerHeight)
+            }
+
+            // Animate
+            function animate() {
+                requestAnimationFrame(animate)
+                controls.update();
+                renderer.render(scene, camera)
+            }
+            animate()
+
+        }
+
+        init()
+    </script>
+</body>
 </html>
