@@ -20,11 +20,11 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump ./source/Mustang_LowPoly.fbm/Body_normal.png
-map_Kd ./source/Mustang_LowPoly.fbm/Body_base.png
-map_Ns ./source/Mustang_LowPoly.fbm/Paint_roughnessS.png
-map_d ./source/Mustang_LowPoly.fbm/Body_base.png
-refl ./source/Mustang_LowPoly.fbm/Body_met.png
+map_Bump Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Body_normal.png
+map_Kd Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Body_base.png
+map_Ns Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Paint_roughnessS.png
+map_d Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Body_base.png
+refl Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Body_met.png
 
 newmtl Bonnet
 Ns 650.249991
@@ -35,11 +35,11 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump ./source/Mustang_LowPoly.fbm/Bonnet_normal.png
-map_Kd ./source/Mustang_LowPoly.fbm/Bonnet_base.png
-map_Ns ./source/Mustang_LowPoly.fbm/Paint_roughnessS.png
-map_d ./source/Mustang_LowPoly.fbm/Bonnet_base.png
-refl ./source/Mustang_LowPoly.fbm/Bonnet_met.png
+map_Bump Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Bonnet_normal.png
+map_Kd Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Bonnet_base.png
+map_Ns Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Paint_roughnessS.png
+map_d Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Bonnet_base.png
+refl Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Bonnet_met.png
 
 newmtl BrakeCaliber
 Ns 812.249980
@@ -50,7 +50,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Kd ./source/Mustang_LowPoly.fbm/BremboTexture.png
+map_Kd Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/BremboTexture.png
 
 newmtl BrakeDisc
 Ns 380.250007
@@ -61,8 +61,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Kd ./source/Mustang_LowPoly.fbm/BrakeDisc2.png
-map_d ./source/Mustang_LowPoly.fbm/BrakeDisc2.png
+map_Kd Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/BrakeDisc2.png
+map_d Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/BrakeDisc2.png
 
 newmtl BrakeDiscInner
 Ns 702.249964
@@ -83,11 +83,11 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump ./source/Mustang_LowPoly.fbm/BumperFront_normal.png
-map_Kd ./source/Mustang_LowPoly.fbm/BumperFront_base.png
-map_Ns ./source/Mustang_LowPoly.fbm/Paint_roughnessS.png
-map_d ./source/Mustang_LowPoly.fbm/BumperFront_base.png
-refl ./source/Mustang_LowPoly.fbm/BumperFront_met.png
+map_Bump Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/BumperFront_normal.png
+map_Kd Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/BumperFront_base.png
+map_Ns Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Paint_roughnessS.png
+map_d Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/BumperFront_base.png
+refl Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/BumperFront_met.png
 
 newmtl BumperRear
 Ns 650.249991
@@ -98,11 +98,11 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump ./source/Mustang_LowPoly.fbm/BumperRear_normal.png
-map_Kd ./source/Mustang_LowPoly.fbm/BumperRear_base.png
-map_Ns ./source/Mustang_LowPoly.fbm/Paint_roughnessS.png
-map_d ./source/Mustang_LowPoly.fbm/BumperRear_base.png
-refl ./source/Mustang_LowPoly.fbm/BumperRear_met.png
+map_Bump Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/BumperRear_normal.png
+map_Kd Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/BumperRear_base.png
+map_Ns Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Paint_roughnessS.png
+map_d Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/BumperRear_base.png
+refl Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/BumperRear_met.png
 
 newmtl Chrome
 Ns 812.249999
@@ -133,8 +133,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump ./source/Mustang_LowPoly.fbm/Door_normal.png
-map_Ns ./source/Mustang_LowPoly.fbm/Paint_roughnessS.png
+map_Bump Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Door_normal.png
+map_Ns Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Paint_roughnessS.png
 
 newmtl Emissive01
 Ns 812.249999
@@ -165,7 +165,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Bump ./source/Mustang_LowPoly.fbm/Floor_normal.png
+map_Bump Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Floor_normal.png
 
 newmtl Glass
 Ns 846.810001
@@ -296,7 +296,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd ./source/Mustang_LowPoly.fbm/License.png
+map_Kd Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/License.png
 
 newmtl Rubber
 Ns 39.062493
@@ -317,7 +317,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump -bm 1.000000 ./source/Mustang_LowPoly.fbm/SideWall_normalnew.png
+map_Bump -bm 1.000000 Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/SideWall_normalnew.png
 
 newmtl Sideskirt
 Ns 650.249991
@@ -328,8 +328,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump ./source/Mustang_LowPoly.fbm/SideSkirt_normal.png
-map_Ns ./source/Mustang_LowPoly.fbm/Paint_roughnessS.png
+map_Bump Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/SideSkirt_normal.png
+map_Ns Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Paint_roughnessS.png
 
 newmtl TailLightInside
 Ns 728.999998
@@ -340,7 +340,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump ./source/Mustang_LowPoly.fbm/MustangTailLight_normal.png
+map_Bump Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/MustangTailLight_normal.png
 
 newmtl TailLightInsideDark
 Ns 323.999994
@@ -361,11 +361,11 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump ./source/Mustang_LowPoly.fbm/TailLight_normal.png
-map_Kd ./source/Mustang_LowPoly.fbm/Tailgate_base.png
-map_Ns ./source/Mustang_LowPoly.fbm/Paint_roughnessS.png
-map_d ./source/Mustang_LowPoly.fbm/Tailgate_base.png
-refl ./source/Mustang_LowPoly.fbm/Tailgate_met.png
+map_Bump Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/TailLight_normal.png
+map_Kd Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Tailgate_base.png
+map_Ns Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Paint_roughnessS.png
+map_d Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Tailgate_base.png
+refl Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Tailgate_met.png
 
 newmtl Tread
 Ns 143.999983
@@ -376,7 +376,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump ./source/Mustang_LowPoly.fbm/Tread_normalnew.png
+map_Bump Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Tread_normalnew.png
 
 newmtl Vent
 Ns 650.249991
@@ -387,8 +387,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 3
-map_Bump ./source/Mustang_LowPoly.fbm/Vent_normal.png
-map_Ns ./source/Mustang_LowPoly.fbm/Paint_roughnessS.png
+map_Bump Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Vent_normal.png
+map_Ns Downloads/fm/67-mustang/source/Mustang_LowPoly.fbm/Paint_roughnessS.png
 
 newmtl Wheel
 Ns 728.999998
