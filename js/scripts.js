@@ -14,7 +14,7 @@ function init() {
 
 
 
-    hlight = new THREE.AmbientLight(0x404040, 100)
+    hlight = new THREE.AmbientLight(0x404040, 200)
     scene.add(hlight)
 
     directionalLight = new THREE.DirectionalLight(0xffffff, 100)
