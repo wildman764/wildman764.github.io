@@ -23,7 +23,7 @@ function init() {
     scene.add(directionalLight)
 
     light = new THREE.PointLight(0xc4c4cc4, 10)
-    light.position.set(0, 300, 500)
+    light.position.set(0, window.innerWidth, window.innerHeight)
     scene.add(light)
 
         light2 = new THREE.PointLight(0xc4c4cc4, 10)
