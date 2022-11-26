@@ -47,7 +47,7 @@ function init() {
 
 
     let loader = new THREE.GLTFLoader()
-    loader.load('../3d-obj-loader/assets/dodge.glb', function(gltf){
+    loader.load('../3d-obj-loader/assets/shellby.glb', function(gltf){
         car = gltf.scene.children[0]
         car.scale.set(0.5, 0.5, 0.5)
         scene.add(gltf.scene)
